@@ -1,0 +1,26 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+		"stylelint-order",
+    "stylelint-scss"
+	],
+  "ignoreFiles": "src/assets/iconfont/*",
+  "overrides": [
+    {
+      "files": ["**/*.scss"],
+      "customSyntax": "postcss-scss"
+    },
+    {
+      "files": ["**/*.vue"],
+      "customSyntax": "postcss-html"
+    }
+  ],
+  "rules": {
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["//", "deep"]
+      }
+    ]
+  }
+}
